@@ -1,5 +1,5 @@
 # evolutionary_algorithm_NSGA-II
-The  multiobjective evolutionary algorithm NSGA-II implemented by Python.
+The  multiobjective evolutionary algorithm NSGA-II implementation in Python.
 
 `evolution_search_nsga.py` Main program, save the population scatter in each generation.  
 `evolution_lib.py` Implement of algorithm.  
