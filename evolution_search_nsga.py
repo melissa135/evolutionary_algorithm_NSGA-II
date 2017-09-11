@@ -2,9 +2,9 @@ import random
 from evolution_lib import *
 import matplotlib.pyplot as plt
 
-p_size = 200
-parameter_num = 2
-target_num = 2
+p_size = 200 # population size
+parameter_num = 2 # dimension of parameters to be optimized
+target_num = 2 # dimension of target function
 parameter_lower_bound = [ 0, 0 ]
 parameter_upper_bound = [ 5, 3 ]
 
