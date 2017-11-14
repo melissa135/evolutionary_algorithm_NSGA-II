@@ -95,7 +95,10 @@ def calculate_crowd_dis(population,parameter_num):
         max_distance = new_list[0].parameter[dim] - new_list[-1].parameter[dim]
         for i in range(1,len(new_list)-1):
             distance = new_list[i-1].parameter[dim] - new_list[i+1].parameter[dim]
-            new_list[0].crowding_distance += distance/max_distance
+            if max_distance == 0 :
+                new_list[i].crowding_distance = 0
+            else :
+                new_list[i].crowding_distance += distance/max_distance
             
     for p in population :
         p.crowding_distance = p.crowding_distance/parameter_num
@@ -125,7 +128,7 @@ def tournment_select(prarents,part_num=2): # binary tournment selection
     
     for p in participants[1:] :
         if p.front_rank < best_rank or \
-           (p.front_rank == best_rank and p.crowding_distance > crowding_distance):
+           (p.front_rank == best_rank and p.crowding_distance > best_crowding_distance):
             best = p
             best_rank = p.front_rank
             best_crowding_distance = p.crowding_distance
