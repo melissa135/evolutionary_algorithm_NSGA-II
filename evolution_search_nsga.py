@@ -22,7 +22,7 @@ if __name__ == '__main__':
       
         all_population = parents | children
         fast_non_dominated_sort(all_population)
-        calculate_crowd_dis(all_population)
+        calculate_crowd_dis(all_population,parameter_num)
        
         parents = set()
         front = 1
