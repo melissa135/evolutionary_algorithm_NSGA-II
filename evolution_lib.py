@@ -87,7 +87,7 @@ def fast_non_dominated_sort(population):
 def calculate_crowd_dis(population,parameter_num):
     infinite = 100000.0 # a large number as infinte
     
-    for dim in parameter_num:
+    for dim in range(0,parameter_num):
         new_list = sort_by_coordinate(population,dim)
         
         new_list[0].crowding_distance += infinite
